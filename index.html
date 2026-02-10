@@ -43,8 +43,32 @@
 
             <!-- Future: Bead Size controls, Palette reduction -->
 
+            <!-- New Color Controls -->
+            <div class="control-group">
+                <label for="colorCountInput">Color Count</label>
+                <input type="text" id="colorCountInput" value="max" placeholder="e.g. 10 or max">
+            </div>
+
+            <div class="control-group">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="noGradientInput">
+                    <span>No Gradient Mode</span>
+                </label>
+            </div>
+
             <div class="actions">
                 <button id="downloadBtn" class="btn primary" disabled>Download Pattern</button>
+            </div>
+
+            <!-- Stats & Palette -->
+            <div id="statsContainer" class="stats-container" style="display: none;">
+                <div class="stat-item">
+                    <span>Total Colors:</span>
+                    <span id="totalColorsVal">0</span>
+                </div>
+                <div class="palette-grid" id="paletteGrid">
+                    <!-- Swatches injected here -->
+                </div>
             </div>
 
             <div class="instructions">
