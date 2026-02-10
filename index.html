@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bead Design Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <header>
+                <h1>BeadGen</h1>
+                <p>Create bead patterns from images</p>
+            </header>
+
+            <div class="control-group">
+                <label for="imageInput" class="file-upload-label">
+                    <span>Upload Image</span>
+                    <input type="file" id="imageInput" accept="image/*">
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label for="gridWidth">Grid Width (Beads)</label>
+                <div class="range-wrapper">
+                    <input type="range" id="gridWidth" min="10" max="150" value="50">
+                    <span id="gridWidthVal">50</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="showGrid" checked>
+                    <span>Show Grid Lines</span>
+                </label>
+            </div>
+
+            <!-- Future: Bead Size controls, Palette reduction -->
+
+            <div class="actions">
+                <button id="downloadBtn" class="btn primary" disabled>Download Pattern</button>
+            </div>
+
+            <div class="instructions">
+                <p>1. Upload an image.</p>
+                <p>2. Adjust the grid width.</p>
+                <p>3. Download your pattern.</p>
+            </div>
+        </aside>
+
+        <main class="preview-area">
+            <div id="emptyState" class="empty-state">
+                <p>No image loaded</p>
+            </div>
+            <div class="canvas-wrapper">
+                <canvas id="beadCanvas"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
