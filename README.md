@@ -28,3 +28,8 @@ A browser-based tool that transforms images into bead stitching patterns. It sim
 - HTML5 / CSS3
 - Vanilla JavaScript (Canvas API)
 - Median Cut Algorithm for color quantization
+
+## Example Output
+
+![Sample Pattern](sample.png)
+

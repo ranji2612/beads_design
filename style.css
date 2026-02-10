@@ -275,3 +275,34 @@ input[type="text"]:focus {
     outline: none;
     border-color: var(--accent-color);
 }
+
+/* Creator Footer */
+.creator-footer {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: #888;
+    background: rgba(18, 18, 18, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+.creator-footer a {
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.creator-footer a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
